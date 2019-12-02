@@ -13,6 +13,8 @@
 							</div>
 							<div class='bottom'>
 								<p>August 19~21,2020 @ Gangneung,South Korea</p>
+								<a href="#welcome"><button type="button" class="btn btn-danger">Details</button></a>
+
 							</div>
 						</div>
 					</div>
@@ -161,6 +163,17 @@
 
 			<!-- Initialize Swiper -->
 			<script>
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
 				var swiper = new Swiper('.swiper-container', {
 					spaceBetween: 1200,
 					effect: 'fade',

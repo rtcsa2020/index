@@ -118,8 +118,12 @@
 	</div>
 
 	<div class="container-empty-other container">
+	
 	</div>
-
+	
+	<div class="container">
+		<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+	</div>
 
 	<!-- footer -->
 	<div class="footer">
@@ -137,6 +141,31 @@
 	<script defer src="styles/js/bootstrap.min.js"></script>
 	<script src="styles/js/swiper.min.js"></script>
 	<script>
+
+mybutton = document.getElementById("myBtn");
+
+$("body").scroll(scrollFunction);
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+  if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+    console.log("you're at the bottom of the page");
+    console.log(window.innerHeight);
+    console.log(window.scrollY);
+    console.log(document.body.offsetHeight);
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0; 
+}
+
+
+
 		$.urlParam = function(name) {
 			var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
 			if (results == null) {
@@ -172,6 +201,11 @@
 				$(".container-empty").load("home.html");
 			}
 		});
+
+
+
+
+
 	</script>
 </body>
 

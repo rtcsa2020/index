@@ -45,6 +45,8 @@
   .main-page {
           background-color: #fff;
           padding-bottom: 15px;
+  	  margin-top: 100px;
+	  margin-bottom:80px;
   }
 
 
@@ -71,11 +73,15 @@
           font-weight: bold;
           font-size: 18pt;
           margin-top: 20px;
+          margin-bottom: 30px;
+  }
+
+  .main_template .sidebar {
+	padding-top:10px;
   }
 
   .announce {
           list-style-type: none;
-          padding-left: 5px;
   }
 
   .announce .message {}
@@ -129,7 +135,7 @@
   .main_template p {
           font-size: 10.5pt;
           color: #333;
-          line-height: 150%;
+          line-height: 200%;
   }
 
   .main_template p.news {
@@ -218,8 +224,10 @@
   .footer {
           text-align: right;
           color: #666666;
-          font-size: 9pt;
-          padding: 10px 0;
+          font-size: 8pt;
+          padding: 30px 0;
+	  margin-top:50px;
+	  background-color:#282828;
   }
 
   .videoWrapper {
@@ -314,10 +322,36 @@
   /*Slider*/
 
 
+  /*RTCSA 2020 Addition */
+
+  .imp-date-entry{
+  	text-align:center;
+	margin-top:10px;
+  }
+  .imp-date-entry .title{
+	font-weight: bold;
+	text-decoration: underline;
+	margin-bottom:0;
+	line-height:8px;	
+  }
+  .imp-date-entry .red{
+  	color:#FF0000;
+  }
+	
+  .imp-date-entry .strike{
+	text-decoration: line-through;
+  
+  	
+  }
+  .imp-date-entry .date{
+  	font-size:
+  }
+	 
+  /*RTCSA 2020 END*/
+
   .logo {
           font-size: 30px;
           color: #ffffff;
-          font-weight: bold;
           padding-top: 5px;
           padding-left: 5px;
 
@@ -326,12 +360,18 @@
   .sub {
           font-size: 14px;
           color: #ffffff;
-          font-weight: bold;
           padding-bottom: 5px;
           padding-left: 5px;
   }
 
   .visa {}
+
+  .container-empty-other p{
+          font-size: 10.5pt;
+          color: #333;
+          line-height: 200%; 
+  }
+
 
   @media (max-width:768px) {
           .patch {
@@ -342,7 +382,7 @@
 
           .container-empty-other {
                   background: #ffffff;
-                  padding-top: 45px;
+                  padding-top: 70px;
                   padding-left: 40px;
                   text-align: justify;
                   padding-right: 40px;
@@ -409,7 +449,7 @@
 
           .container-empty-other {
                   background: #ffffff;
-                  padding-top: 80px;
+                  padding-top: 100px;
                   padding-left: 60px;
                   padding-right: 60px;
                   text-align: justify;

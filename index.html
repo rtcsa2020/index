@@ -21,18 +21,19 @@
 
 
 	<link rel="stylesheet" href="styles/css/swiper.min.css">
-
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lora" />
 	<!-- Demo styles -->
 	<style>
 		html,
 		body {
 			position: relative;
 			height: 100%;
+			overflow-x:hidden;
 		}
 
 		body {
-			background: #eee;
-			font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+			background: #fff;
+			font-family: sans-serif;
 			font-size: 14px;
 			color: #000;
 			margin: 0;
@@ -66,7 +67,7 @@
 
 <body>
 	<!-- Header + Navigation Bar -->
-	<nav class="navbar navbar-inverse navbar-fixed-top" style="background:#282828">
+	<nav class="navbar navbar-inverse navbar-fixed-top" style="background:#080808">
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<div class row>
@@ -88,7 +89,7 @@
 
 				<div id="navbar" class="collapse navbar-collapse" style="padding-top:20px">
 					<ul class="nav navbar-nav navbar-right">
-						<li class="active" data-page="cfp.html"><a href="./?page=cfp.html">CFP</a></li>
+						<li drop-name="cfp" data-page="cfp.html"><a href="./?page=cfp.html">CFP</a></li>
 						<!-- <li class="dropdown" drop-name="attending">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Attending<span class="caret"></span></a>
 							<ul class="dropdown-menu">
@@ -98,7 +99,7 @@
 							</ul>
 						</li> -->
 
-						<li class="dropdown" drop-name="comittees">
+						<li class="dropdown" drop-name="committees">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Organizers<span class="caret"></span></a>
 							<ul class="dropdown-menu">
 								 <li><a href="./?page=committees.html">Committees</a></li>
@@ -156,20 +157,16 @@
 					return $(this).attr("data-page") == page;
 				}).addClass('active');
 
-				if (page == "members.html" || page == "alumni.html")
+				if (page == "committees.html")
 					$("ul.nav > li").filter(function() {
-						return $(this).attr("drop-name") == "members";
+						return $(this).attr("drop-name") == "committees";
 					}).addClass('active');
 
-				if (page == "conferences.html" || page == "journals.html" || page == "others.html")
+				if (page == "cfp.html")
 					$("ul.nav > li").filter(function() {
-						return $(this).attr("drop-name") == "publications";
+						return $(this).attr("drop-name") == "cfp";
 					}).addClass('active');
 
-				if (page.indexOf("research") != -1)
-					$("ul.nav > li").filter(function() {
-						return $(this).attr("data-page") == "research.html";
-					}).addClass('active');
 
 			} else {
 				$(".container-empty").load("home.html");

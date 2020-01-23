@@ -346,7 +346,16 @@
   .imp-date-entry .date{
   	font-size:
   }
-	 
+
+
+  .transport img {
+  	height:400px;
+  }
+  .city img {
+  	height:340px;
+  }
+
+
   /*RTCSA 2020 END*/
 
   .logo {

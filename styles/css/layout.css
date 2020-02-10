@@ -558,12 +558,40 @@
           margin-bottom: 0px;
   }
 
+  .keynote-speaker > p {
+	  line-height:1.4;
+  }
   .keynote-speaker .kn-position {
           text-align: center;
 	  margin-bottom:0px;
 
   }
+  .keynote img{
+	  max-height:400px;
+	  max-width:350px;		 
+  }
+  @media only screen and (max-width: 400px) {
+  	.keynote img{
+	  max-height:340px;
+	  max-width:300px;		 
+  	}
+  }
+  .keynote-title{
+  	text-align:center;
+	line-height:normal;
+  }
+  .keynote-title > p{
+	margin-bottom:0px;
 
+  }
+  .keynote-title-main-page{
+	margin-top:10px;
+  }
+  .keynote-title-main-page > p{
+  	text-align:center;
+  	margin-bottom:0px;
+	line-height:1.4;
+  }
   table .role{
   	font-weight: 700;
   }

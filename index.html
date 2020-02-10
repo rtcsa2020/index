@@ -69,7 +69,7 @@
 	<!-- Header + Navigation Bar -->
 	<nav class="navbar navbar-inverse navbar-fixed-top" style="background:#080808">
 		<div class="container-fluid">
-			<div class="navbar-header">
+			<div >
 				<div class row>
 					<div onclick="location.href='index.html'" class="col-xs-8 col-sm-8 col-md-6">
 						<p class="logo">RTCSA 2020 </p>
@@ -89,6 +89,7 @@
 				<div id="navbar" class="collapse navbar-collapse" style="padding-top:20px">
 					<ul class="nav navbar-nav navbar-right">
 						<li drop-name="cfp" data-page="cfp.html"><a href="./?page=cfp.html">CFP</a></li>
+						<li drop-name="keynotes" data-page="keynotes.html"><a href="./?page=keynotes.html">Keynotes</a></li>
 						<li class="dropdown" drop-name="attending">
 							<a href="./?page=venue.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Attending<span class="caret"></span></a>
 							<ul class="dropdown-menu">
@@ -175,18 +176,23 @@ function topFunction() {
 			if (page != null) {
 				$(".container-empty-other").load(page);
 				$("ul.nav > li").removeClass('active');
-				$("ul.nav > li").filter(function() {
-					return $(this).attr("data-page") == page;
-				}).addClass('active');
 
 				if (page == "committees.html")
 					$("ul.nav > li").filter(function() {
 						return $(this).attr("drop-name") == "committees";
 					}).addClass('active');
+				if (page == "venue.html")
+					$("ul.nav > li").filter(function() {
+						return $(this).attr("drop-name") == "attending";
+					}).addClass('active');
 
 				if (page == "cfp.html")
 					$("ul.nav > li").filter(function() {
 						return $(this).attr("drop-name") == "cfp";
+					}).addClass('active');
+				if (page == "keynotes.html")
+					$("ul.nav > li").filter(function() {
+						return $(this).attr("drop-name") == "keynotes";
 					}).addClass('active');
 
 

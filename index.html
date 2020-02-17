@@ -6,10 +6,10 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 
-  	<meta name="description" content="The 26th IEEE International Conference on Embedded and Real-Time Computing Systems and Applications.">
-  	<meta name="keywords" content="RTCSA 2020,RTCSA'20,RTCSA,RTCSA2020,Real-Time">
-  	<meta name="author" content="RTCSA2020">
-  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="The 26th IEEE International Conference on Embedded and Real-Time Computing Systems and Applications.">
+	<meta name="keywords" content="RTCSA 2020,RTCSA'20,RTCSA,RTCSA2020,Real-Time">
+	<meta name="author" content="RTCSA2020">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
 	<title> RTCSA 2020. The 26th IEEE International Conference on Embedded and Real-Time Computing Systems and Applications.</title>
@@ -28,7 +28,7 @@
 		body {
 			position: relative;
 			height: 100%;
-			overflow-x:hidden;
+			overflow-x: hidden;
 		}
 
 		body {
@@ -69,7 +69,7 @@
 	<!-- Header + Navigation Bar -->
 	<nav class="navbar navbar-inverse navbar-fixed-top" style="background:#080808">
 		<div class="container-fluid">
-			<div >
+			<div>
 				<div class row>
 					<div onclick="location.href='index.html'" class="col-xs-8 col-sm-8 col-md-6">
 						<p class="logo">RTCSA 2020 </p>
@@ -97,13 +97,13 @@
 								<li><a href="./?page=venue.html">Venue</a></li>
 								<!-- <li><a href="./?page=visa.html">Visa</a></li> -->
 							</ul>
-						</li> 
+						</li>
 
 						<li class="dropdown" drop-name="committees">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Organizers<span class="caret"></span></a>
 							<ul class="dropdown-menu">
-								 <li><a href="./?page=committees.html">Committees</a></li>
-								 <!--<li><a href="./?page=sponsor.html">Sponsers</a></li>-->
+								<li><a href="./?page=committees.html">Committees</a></li>
+								<!--<li><a href="./?page=sponsor.html">Sponsers</a></li>-->
 							</ul>
 
 					</ul>
@@ -118,9 +118,9 @@
 	</div>
 
 	<div class="container-empty-other container">
-	
+
 	</div>
-	
+
 	<div class="container">
 		<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 	</div>
@@ -141,22 +141,22 @@
 	<script defer src="styles/js/bootstrap.min.js"></script>
 	<script src="styles/js/swiper.min.js"></script>
 	<script>
+		mybutton = document.getElementById("myBtn");
 
-mybutton = document.getElementById("myBtn");
+		$("body").scroll(scrollFunction);
 
-$("body").scroll(scrollFunction);
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
+		function scrollFunction() {
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				mybutton.style.display = "block";
+			} else {
+				mybutton.style.display = "none";
+			}
+		}
 
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0; 
-}
+		function topFunction() {
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+		}
 
 
 
@@ -200,11 +200,6 @@ function topFunction() {
 				$(".container-empty").load("home.html");
 			}
 		});
-
-
-
-
-
 	</script>
 </body>
 

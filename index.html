@@ -88,7 +88,15 @@
 
 				<div id="navbar" class="collapse navbar-collapse" style="padding-top:20px">
 					<ul class="nav navbar-nav navbar-right">
-						<li drop-name="cfp" data-page="cfp.html"><a href="./?page=cfp.html">CFP</a></li>
+						<li class="dropdown" drop-name="cfp">
+							<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#">CFP<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li drop-name="cfp"><a href="./?page=cfp.html">CFP (Main Conference)</a></li>
+								<li drop-name="cfp"><a href="./?page=cfp-student.html">CFP (Student Session)</a></li>
+							</ul>
+						
+						
+						</li>
 						<li drop-name="keynotes" data-page="keynotes.html"><a href="./?page=keynotes.html">Keynotes</a></li>
 						<li class="dropdown" drop-name="attending">
 							<a href="./?page=venue.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Attending<span class="caret"></span></a>
@@ -195,6 +203,10 @@
 						return $(this).attr("drop-name") == "keynotes";
 					}).addClass('active');
 
+				if (page == "cfp-student.html")
+					$("ul.nav > li").filter(function() {
+						return $(this).attr("drop-name") == "cfp";
+					}).addClass('active');
 
 			} else {
 				$(".container-empty").load("home.html");

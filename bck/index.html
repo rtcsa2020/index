@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+	<meta name="description" content="The 26th IEEE International Conference on Embedded and Real-Time Computing Systems and Applications.">
+	<meta name="keywords" content="RTCSA 2020,RTCSA'20,RTCSA,RTCSA2020,Real-Time">
+	<meta name="author" content="RTCSA2020">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+	<title> RTCSA 2020. The 26th IEEE International Conference on Embedded and Real-Time Computing Systems and Applications.</title>
+
+	<link rel="stylesheet" href="styles/css/bootstrap.min.css">
+	<!--<link rel="stylesheet" href="styles/css/font.css"> -->
+	<link rel="stylesheet" href="styles/css/layout.css">
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+
+
+	<link rel="stylesheet" href="styles/css/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lora" />
+	<!-- Demo styles -->
+	<style>
+		html,
+		body {
+			position: relative;
+			height: 100%;
+			overflow-x: hidden;
+		}
+
+		body {
+			background: #fff;
+			font-family: sans-serif;
+			font-size: 14px;
+			color: #000;
+			margin: 0;
+		}
+
+		.swiper-container {
+			width: 100%;
+			height: 100%;
+		}
+
+		.swiper-slide {
+			text-align: center;
+			font-size: 18px;
+			background: #fff;
+			/* Center slide text vertically */
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			-webkit-justify-content: center;
+			justify-content: center;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			-webkit-align-items: center;
+			align-items: center;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- Header + Navigation Bar -->
+	<nav class="navbar navbar-inverse navbar-fixed-top" style="background:#080808">
+		<div class="container-fluid">
+			<div>
+				<div class row>
+					<div onclick="location.href='index.html'" class="col-xs-8 col-sm-8 col-md-6">
+						<p class="logo">RTCSA 2020 </p>
+						<p class="sub"> The 26th IEEE International Conference on Embedded and Real-Time Computing Systems and Applications</p>
+					</div>
+
+					<div class="col-xs-4 col-sm-4 col-md-6">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" style="margin-top:20px">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+				</div>
+
+				<div id="navbar" class="collapse navbar-collapse" style="padding-top:20px">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="dropdown" drop-name="cfp">
+							<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#">CFP<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li drop-name="cfp"><a href="./?page=cfp.html">CFP (Main Conference)</a></li>
+								<li drop-name="cfp"><a href="./?page=cfp-student.html">CFP (Student Session)</a></li>
+							</ul>
+						
+						
+						</li>
+						<li drop-name="keynotes" data-page="keynotes.html"><a href="./?page=keynotes.html">Keynotes</a></li>
+						<li class="dropdown" drop-name="attending">
+							<a href="./?page=venue.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Attending<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<!-- <li><a href="./?page=register.html">Register</a></li> -->
+								<li><a href="./?page=venue.html">Venue</a></li>
+								<!-- <li><a href="./?page=visa.html">Visa</a></li> -->
+							</ul>
+						</li>
+
+						<li class="dropdown" drop-name="committees">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Organizers<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="./?page=committees.html">Committees</a></li>
+								<!--<li><a href="./?page=sponsor.html">Sponsers</a></li>-->
+							</ul>
+
+					</ul>
+
+
+				</div>
+			</div>
+	</nav>
+
+	<!-- main contents -->
+	<div class="container-empty">
+	</div>
+
+	<div class="container-empty-other container">
+
+	</div>
+
+	<div class="container">
+		<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+	</div>
+
+	<!-- footer -->
+	<div class="footer">
+		<div class="container-fluid">
+			RTCAS 2020. The 26th IEEE International Conference on Embedded and Real-Time Computing Systems and Applications.
+		</div>
+	</div>
+
+	<!-- JavaScript
+		================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+	<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+	<!-- <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script> -->
+	<script defer src="styles/js/bootstrap.min.js"></script>
+	<script src="styles/js/swiper.min.js"></script>
+	<script>
+		mybutton = document.getElementById("myBtn");
+
+		$("body").scroll(scrollFunction);
+
+		function scrollFunction() {
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				mybutton.style.display = "block";
+			} else {
+				mybutton.style.display = "none";
+			}
+		}
+
+		function topFunction() {
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+		}
+
+
+
+		$.urlParam = function(name) {
+			var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+			if (results == null) {
+				return null;
+			} else {
+				return results[1] || 0;
+			}
+		}
+
+
+		$(document).ready(function() {
+			var page = $.urlParam('page');
+
+			if (page != null) {
+				$(".container-empty-other").load(page);
+				$("ul.nav > li").removeClass('active');
+
+				if (page == "committees.html")
+					$("ul.nav > li").filter(function() {
+						return $(this).attr("drop-name") == "committees";
+					}).addClass('active');
+				if (page == "venue.html")
+					$("ul.nav > li").filter(function() {
+						return $(this).attr("drop-name") == "attending";
+					}).addClass('active');
+
+				if (page == "cfp.html")
+					$("ul.nav > li").filter(function() {
+						return $(this).attr("drop-name") == "cfp";
+					}).addClass('active');
+				if (page == "keynotes.html")
+					$("ul.nav > li").filter(function() {
+						return $(this).attr("drop-name") == "keynotes";
+					}).addClass('active');
+
+				if (page == "cfp-student.html")
+					$("ul.nav > li").filter(function() {
+						return $(this).attr("drop-name") == "cfp";
+					}).addClass('active');
+
+			} else {
+				$(".container-empty").load("home.html");
+			}
+		});
+	</script>
+</body>
+
+</html>

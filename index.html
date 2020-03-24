@@ -98,8 +98,8 @@
 
 						</li>
 						<li drop-name="keynotes" data-page="keynotes.html"><a href="./?page=keynotes.html">Keynotes</a></li>
-						<li class="dropdown" drop-name="attending">
-							<a href="./?page=venue.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Attending<span class="caret"></span></a>
+						<li class="dropdown" drop-name="logistics">
+							<a href="./?page=venue.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Logistics<span class="caret"></span></a>
 							<ul class="dropdown-menu">
 								<!-- <li><a href="./?page=register.html">Register</a></li> -->
 								<li><a href="./?page=venue.html">Venue</a></li>
@@ -121,7 +121,7 @@
 			</div>
 	</nav>
 
-	<!-- Modal -->
+	<!-- Modal COVID-19 ALERT-->
 	<div class="modal fade" id="COVIDAlert" tabindex="-1" role="dialog" aria-labelledby="Corona Alert" aria-hidden="true">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
@@ -140,12 +140,11 @@
 
 					 <input type="checkbox" id="alertOFF" value="Do not show this for next 24 Hours."> 
 					<button type="button" onclick="doNotShowAgain()" class="btn btn-secondary" data-dismiss="modal">Close</button>
-					<!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
 				</div>
 			</div>
 		</div>
 	</div>
-
+	
 
 
 
@@ -221,7 +220,7 @@
 					}).addClass('active');
 				if (page == "venue.html")
 					$("ul.nav > li").filter(function() {
-						return $(this).attr("drop-name") == "attending";
+						return $(this).attr("drop-name") == "logistics";
 					}).addClass('active');
 
 				if (page == "cfp.html")
@@ -232,6 +231,11 @@
 					$("ul.nav > li").filter(function() {
 						return $(this).attr("drop-name") == "keynotes";
 					}).addClass('active');
+				if (page == "logistics.html")
+					$("ul.nav > li").filter(function() {
+						return $(this).attr("drop-name") == "logistics";
+					}).addClass('active');
+
 
 				if (page == "cfp-student.html")
 					$("ul.nav > li").filter(function() {
@@ -250,7 +254,7 @@
 			localStorage.clear();
 			$("#COVIDAlert").modal('show');
 		}
-		
+		/*
 		function doNotShowAgain() {
 			if ($('#alertOFF').is(':checked')) {
 				console.log("Alert Disabled for next 24 hours.");
@@ -275,7 +279,7 @@
 				}
 			}
 
-		}); 
+		});*/ 
 	</script>
 
 </body>

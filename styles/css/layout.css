@@ -651,8 +651,7 @@
           margin-bottom: 20px;
           position: relative;
           z-index: 1;
-          background: #DC143C;
-          color: #000000;
+          background: #CD5C5C;
   }
 
   .notice-card.card-information .content {

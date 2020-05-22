@@ -98,14 +98,13 @@
 
 						</li>
 						<li drop-name="keynotes" data-page="keynotes.html"><a href="./?page=keynotes.html">Keynotes</a></li>
-						<li class="dropdown" drop-name="logistics">
+						<!-- <li class="dropdown" drop-name="logistics">
 							<a href="./?page=venue.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Logistics<span class="caret"></span></a>
 							<ul class="dropdown-menu">
-								<!-- <li><a href="./?page=register.html">Register</a></li> -->
+								<li><a href="./?page=register.html">Register</a></li>
 								<li><a href="./?page=venue.html">Venue</a></li>
-								<!-- <li><a href="./?page=visa.html">Visa</a></li> -->
 							</ul>
-						</li>
+						</li> -->
 
 						<li class="dropdown" drop-name="committees">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Organizers<span class="caret"></span></a>
@@ -145,6 +144,41 @@
 		</div>
 	</div>
 	
+	<!-- Modal COVID-19 ALERT-->
+	<div class="modal fade" id="virtualOnlyNotice" tabindex="-1" role="dialog" aria-labelledby="Virtual Only Notice" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header text-center">
+
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="exampleModalLongTitle"><b>SPECIAL NOTICE – CORONAVIRUS (COVID-19)</b></h4>
+				</div>
+				<div class="modal-body text-justify">
+The safety and well-being of all conference participants is our top priority. After studying and evaluating the announcements, guidance, and news released by relevant national departments, we have made the decision that RTCSA 2020 will continue as scheduled on 19-21 August, by being converted to an exciting, fully virtual conference, and will not take place physically in Korea.  
+</br>
+</br>
+
+<b>Registration Fee</b>
+</br>
+We require at least one paid registration per accepted paper. The Organizing Committee will be making a final determination on a new, reduced flat registration fee for such registrations. All other registrations will be free. 
+</br>
+</br>
+
+<b>Virtual Conference Format</b>
+</br>
+We are currently evaluating many factors and reviewing best practices to determine the optimal format for the various sessions that are scheduled at RTCSA 2020. We will be making a relevant announcement as soon as these details are finalized. We hope you all stay safe and well, and look forward to working with you all to put on an exciting virtual RTCSA.	
+				</div>
+				<div class="modal-footer">
+					Do not show this message again.
+
+					 <input type="checkbox" id="alertOFF2" value="Do not show this for next 24 Hours."> 
+					<button type="button" onclick="doNotShowAgain()" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
 
 
 
@@ -254,9 +288,18 @@
 			localStorage.clear();
 			$("#COVIDAlert").modal('show');
 		}
-		/*
+		function showVirtualOnlyNotice() {
+			localStorage.clear();
+			$("#virtualOnlyNotice").modal('show');
+		}
+		
 		function doNotShowAgain() {
 			if ($('#alertOFF').is(':checked')) {
+				console.log("Alert Disabled for next 24 hours.");
+				var now = new Date().getTime();
+				localStorage.setItem('alertOFFTime', now)
+			}
+			if ($('#alertOFF2').is(':checked')) {
 				console.log("Alert Disabled for next 24 hours.");
 				var now = new Date().getTime();
 				localStorage.setItem('alertOFFTime', now)
@@ -264,22 +307,24 @@
 		}
 
 		$(document).ready(function() {
-			var hours = 24; // Reset after 24 hours 
+			var hours = 48; // Reset after 48 hours 
 
 			var now = new Date().getTime();
 			var alertOFFTime = localStorage.getItem('alertOFFTime');
 			if (alertOFFTime === null) {
-				$("#COVIDAlert").modal('show');
+				$("#virtualOnlyNotice").modal('show');
+				//$("#COVIDAlert").modal('show');
 			} else {
 				if (now - alertOFFTime > hours * 60 * 60 * 1000) {
 					localStorage.clear()
-					$("#COVIDAlert").modal('show');
+					$("#virtualOnlyNotice").modal('show');
+					//$("#COVIDAlert").modal('show');
 				} else {
 					console.log("Alert OFF. ");
 				}
 			}
 
-		});*/ 
+		}); 
 	</script>
 
 </body>

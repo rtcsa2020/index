@@ -98,14 +98,14 @@
 
 						</li>
 						<li drop-name="keynotes" data-page="keynotes.html"><a href="./?page=keynotes.html">Keynotes</a></li>
+						<li drop-name="program" data-page="program.html"><a href="./?page=program.html">Program</a></li>
 						<li class="dropdown" drop-name="attending">
 							<a href="./?page=register.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Attending<span class="caret"></span></a>
 							<ul class="dropdown-menu">
 								<li><a href="./?page=register.html">Registration</a></li>
-								<li><a href="./?page=program.html">Program</a></li>
 							</ul>
 						</li>
-						
+
 						<!--<li class="dropdown" drop-name="logistics">
 							<a href="./?page=venue.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Logistics<span class="caret"></span></a>
 							<ul class="dropdown-menu">
@@ -256,7 +256,11 @@ We are currently evaluating many factors and reviewing best practices to determi
 				$(".container-empty-other").load(page);
 				$("ul.nav > li").removeClass('active');
 				console.log(page)
-				if (page == "register.html" || page =="program.html")
+				if (page == "program.html")
+					$("ul.nav > li").filter(function() {
+						return $(this).attr("drop-name") == "program";
+					}).addClass('active');
+				if (page == "register.html")
 					$("ul.nav > li").filter(function() {
 						return $(this).attr("drop-name") == "attending";
 					}).addClass('active');
